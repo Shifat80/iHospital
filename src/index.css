@@ -1,1 +1,45 @@
 @import "tailwindcss";
+@theme {
+	/* Brand colors */
+	--color-primary: #38B6FF;
+	--color-primary-dark: #1E4D6B;
+	--color-primary-light: #E6F7FF;
+
+	--color-secondary: #C5FF41;       /* neon green accent */
+	--color-secondary-dark: #8CCF00;
+	--color-secondary-light: #E9FFC9;
+
+	/* Background surface colors */
+	--color-background: #0B2C3D;      /* page background */
+	--color-background-card: #123F52; /* glass/card surface */
+
+	/* Neutrals & state */
+	--color-neutral: #F4F7FA;
+	--color-neutral-dark: #333333;
+	--color-success: #4ADE80;
+	--color-warning: #FACC15;
+	--color-info: #38BDF8;
+
+	/* Typography */
+	--font-sans: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+/* Hero animations (moved from Hero.jsx) */
+@keyframes float {
+	0%, 100% { transform: translateY(0px); }
+	50% { transform: translateY(-10px); }
+}
+
+@keyframes float-delayed {
+	0%, 100% { transform: translateY(0px); }
+	50% { transform: translateY(-8px); }
+}
+
+.animate-float {
+	animation: float 3s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+	animation: float-delayed 3s ease-in-out infinite;
+	animation-delay: 1.5s;
+}
